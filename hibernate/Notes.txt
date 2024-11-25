@@ -1,0 +1,57 @@
+Disadvantages or drawbacks of JDBC :
+    -> Biolerplate code
+    -> No automatic table creation
+    -> No ID generation
+    -> Handle Checked Exception
+    -> No cache memory
+    -> Establishing the relation between multiple tables is very difficult
+
+Hibernate :
+    - Hibernate is a framework which helps in creating connection with database and do the CRUD operations.
+    Features :
+        -> Hibernate is ORM(Object Relational Mapping) tool.
+        -> Establishing the relation between multiple tables is easy.
+        -> Automatic table creation is available.
+        -> Automatic ID generation is available.
+        -> No need to Handle the Exceptions.
+        -> Hibernate provides cache memory which helps in improving the performance of the application.
+        -> It support dialect.
+        -> It provides HQL(Hibernate Query Language) or JPQL(Java Persistence Query Language).
+
+How does Hibernate works :
+    - Hibernate uses JDBC internally to connect with the database and JDBC uses driver software to connect to database.
+    diagram 25/11/24.
+
+ORM (Object Relational Mapping) :
+    - entity class is a class which is related to table in database.
+    
+    @entity
+    class Student{
+        @id  ---> primary key
+        int id;
+        String name;
+        String email;
+    
+        Student s = new Student();
+        s.setId(1);
+        s.setName("Rahul");
+        s.setEmail("rahul@gmail.com");
+    }
+
+    - In ORM(Object Relational Mapping) the entity class will be represented as or mapped with database table.
+    - In this case the entity class name will be represented as table name.
+    - Every variables of this class will be represented as columns inside the table.
+    - The datatype of each variable will be represented as datatype of the respective column.
+    - An Object of this entity class will be represented as rows inside the table.
+
+Rules to create entity class :
+    - The class should be of public and non-abstract.
+    - This class should be anotated with @entity anotation.
+    - This class should have one ID that can be created by using @id anotation which is represented as primary key.
+    - Each and Every variables in entity class should have getters and setters.
+    - This class should contain zero parameterized contructors or default contructor.
+     
+
+    
+
+
