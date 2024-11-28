@@ -13,7 +13,7 @@ Hibernate with JPA (Java Persistence API) :
         -> Establishing the relation between multiple tables is easy.
         -> Automatic table creation is available.
         -> Automatic ID generation is available.
-        -> No need to Handle the Exceptions.
+        -> No need to Handle the Exceptions.    
         -> Hibernate provides cache memory which helps in improving the performance of the application.
         -> It support dialect.
         -> It provides HQL(Hibernate Query Language) or JPQL(Java Persistence Query Language).
@@ -106,3 +106,20 @@ EntityTrasaction:
 Persistence.xml:
     - This is a central piece of configuration which contains any number of Persistence units.
     - Each Persistence unit can have particular database configuration.
+
+Hibernate mappings:
+    - Establishing the relation between multiple tables or entities using Hibernate known as Hibernate mappings.
+    - Ther are two ways to acheive Hibernate mappings they are : 
+        1. Unidirectional
+        2. Bidirectional
+
+Types of Hibernate mappings:
+    1. one to one ==> car & engine.
+    2. one to many ==> bank & accounts.
+    3. many to one ==> employees & manager.
+    4. many to many ==> students & courses.
+
+Unidirectional Mapping:
+    1. one to one :
+        - In Hibernate we can acheive one to one Mapping using @OnetoOne anotation provided by Hibernate.
+        
