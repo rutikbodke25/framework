@@ -6,7 +6,7 @@ Disadvantages or drawbacks of JDBC :
     -> No cache memory
     -> Establishing the relation between multiple tables is very difficult
 
-Hibernate :
+Hibernate with JPA (Java Persistence API) :
     - Hibernate is a framework which helps in creating connection with database and do the CRUD operations.
     Features :
         -> Hibernate is ORM(Object Relational Mapping) tool.
@@ -51,7 +51,58 @@ Rules to create entity class :
     - Each and Every variables in entity class should have getters and setters.
     - This class should contain zero parameterized contructors or default contructor.
      
+Program to do CRUD operations using Hibernate :
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("Persistence Unit Name");
+        -> Load the driver.
+        -> Create the connection.
 
+    EntityManager em = emf.createEntityManager();
+        -> em.persist(entity) ----> save/insert
+        -> em.find(entity) ------> read/fetch
+        -> em.merge(entity) ------> update
+        -> em.remove(entity) ------> delete
     
+    EntityTrasaction et = em.getTrasaction();
+        -> et.begin();
+        -> et.commit(); 
+    
+Program to fetch all the records from the table :
 
 
+EntityManagerFactory:
+    - EntityManagerFactory is an interface.
+    - EntityManagerFactory will be create for perticular database.
+    - The main purpose of EntityManagerFactory to get Object of EntityManager.
+    - We can get an Object of EntityManagerFactory, we need to call createEntityManagerFactory("Persistence Unit Name") method Persent inside Persistence class by passing Persistence Unit name.
+    - This Persistence unit will be containing the database configuration.
+    - With the help of this Persistence unit, EntityManagerFactory will load the driver and creates a connection.
+
+EntityManager:
+    - EntityManager is an interface Persent inside javax.Persistence package.
+    - EntityManager contains some methods which helps in performing CRUD operations.
+    Eg. persist(entity) => which is used to insert the record or save the record.
+
+        find(entity.class,et) => which is used to fetch a single record from table by using primary key.
+    return type of find() is entity Object.
+    
+        merge(entity) => It will Check whether the given record is Persent or not , if it is Persent it update the existing record else it will insert it as a new record.
+    return type of merge() entity Object , it will return the updated entity Object.
+
+        remove(entity) => It is used to delete record from the table.
+    
+    - We can get an Object of EntityManager using createEntityManager() method Persent inside EntityManagerFactory Object.
+    - For a EntityManagerFactory we can have any numbers of EntityManagers.
+
+EntityTrasaction:
+    - EntityTrasaction is an interface Persent inside javax.Persistence package.
+    - We can get an Object of EntityTrasaction by using getTrasaction() method Persent inside EntityManager Object.
+    - Since all the DML statements are not autocommit statements, we have to commit them by managing the Trasaction by using EntityTrasaction.
+    - EntityTrasaction is a set of changes or actions which are committed to the table or rolled back together.
+    - In java EntityTrasaction is nothing but a changes made to the set of java Objects will be committing together or rolled back together.
+    Eg. EntityTrasaction provides two important methods to manage the Trasaction :
+        begin() => to start the Trasaction.
+        commit() => to save the Trasaction.
+
+Persistence.xml:
+    - This is a central piece of configuration which contains any number of Persistence units.
+    - Each Persistence unit can have particular database configuration.
