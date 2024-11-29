@@ -27,6 +27,9 @@
 			<item value="org.eclipse.pde.userAssistance"/>
 			<item value="org.eclipse.wst.web.ui"/>
 			<item value="org.eclipse.jst.ws.ui.new"/>
+			<item value="org.eclipse.jst.ws.ui.new/org.eclipse.jst.ws.jaxws.ui.wizards.category"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
+			<item value="org.eclipse.ui.Examples"/>
 		</list>
 	</section>
 </section>

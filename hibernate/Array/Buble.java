@@ -14,6 +14,8 @@ public class Buble {
                 }
             }   
         }
-        System.out.println(arr[0]);
+        for (int a : arr) {
+            System.out.print(a + " ");
+        }
     }
 }

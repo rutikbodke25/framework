@@ -123,3 +123,5 @@ Unidirectional Mapping:
     1. one to one :
         - In Hibernate we can acheive one to one Mapping using @OnetoOne anotation provided by Hibernate.
         
+
+note:
