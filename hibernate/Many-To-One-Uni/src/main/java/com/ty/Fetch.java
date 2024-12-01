@@ -23,7 +23,7 @@ public class Fetch {
 			System.out.println(product.getPrice());
 
 		} else {
-			System.out.println("Not found");
+			System.err.println("Not found");
 		}
 	}
 }

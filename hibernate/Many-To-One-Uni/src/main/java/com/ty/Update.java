@@ -10,9 +10,9 @@ public class Update {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("dev");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction et = em.getTransaction();
-		
+
 		Review review = em.find(Review.class, 01);
-		if (review!=null) {
+		if (review != null) {
 			et.begin();
 			review.setMessage("Bad Product");
 			em.merge(review);
@@ -20,7 +20,7 @@ public class Update {
 			product.setName("MotoRola");
 			em.merge(product);
 			et.commit();
-		}else {
+		} else {
 			System.err.println("Not found");
 		}
 	}

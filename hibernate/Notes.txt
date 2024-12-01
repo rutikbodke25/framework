@@ -125,3 +125,10 @@ Unidirectional Mapping:
         
 
 note:
+
+
+
+    3. many-to-one:
+
+    4. many-to-many-uni:
+    

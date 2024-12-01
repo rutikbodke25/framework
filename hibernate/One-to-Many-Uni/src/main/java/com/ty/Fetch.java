@@ -27,6 +27,8 @@ public class Fetch {
 				System.out.println(account.getName());
 				System.out.println("-----------------------------------------------");
 			}
+		}else {
+			System.err.println("Not dound");
 		}
 	}
 }

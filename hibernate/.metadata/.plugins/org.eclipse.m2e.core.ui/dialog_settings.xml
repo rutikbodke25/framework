@@ -49,6 +49,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Many-To-Many-Uni"/>
 			<item value="Many-To-One-Uni"/>
 			<item value="One-to-Many-Uni"/>
 			<item value="One-to-One-Uni"/>
