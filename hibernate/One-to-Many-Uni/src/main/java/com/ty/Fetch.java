@@ -28,7 +28,7 @@ public class Fetch {
 				System.out.println("-----------------------------------------------");
 			}
 		}else {
-			System.err.println("Not dound");
+			System.out.println("Not dound");
 		}
 	}
 }
